@@ -52,11 +52,6 @@
       "idiom" : "ios-marketing",
       "scale" : "1x",
       "size" : "1024x1024"
-    },
-    {
-      "filename" : "ios-marketing.png",
-      "idiom" : "universal",
-      "scale" : "1x"
     }
   ],
   "info" : {

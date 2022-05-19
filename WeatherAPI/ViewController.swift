@@ -10,6 +10,7 @@ import CoreLocation
 
 
 class ViewController: UIViewController {
+    
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -20,9 +21,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var wind: UILabel!
     @IBOutlet weak var feel: UILabel!
     @IBOutlet weak var humidity: UILabel!
-
     @IBOutlet weak var bottomView: UIView!
-
     @IBOutlet weak var humidityLabel: UILabel!
     @IBOutlet weak var feelsLikeLabel: UILabel!
     @IBOutlet weak var windLabel: UILabel!
@@ -30,12 +29,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var gradientView: GradientView!
     @IBOutlet weak var changeBackgroundButton: UIButton!
     @IBOutlet weak var changeTimeButton: UIButton!
-    
-    lazy var tableViewGradient: GradientView = {
-        let view = GradientView(colors: [], locations: [])
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
+
     var daily: [APIResponse.Daily] = []
     var cities: [City] = []
     var searchTimer: Timer?
@@ -43,13 +37,20 @@ class ViewController: UIViewController {
     var dayTime = DayTime.morning
     let tableViewCellReuse = "tableViewCellReuse"
     let collectionViewCellReuse = "collectionViewCellReuse"
-    
+
+    lazy var tableViewGradient: GradientView = {
+        let view = GradientView(colors: [], locations: [])
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+
     private let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "EEEE"
 
         return formatter
     }()
+
     private lazy var locationManager: CLLocationManager = {
         let manager = CLLocationManager()
         manager.delegate = self
@@ -57,7 +58,6 @@ class ViewController: UIViewController {
     }()
 
     private let service = WeatherService()
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,19 +83,16 @@ class ViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.register(DailyCollectionViewCell.self, forCellWithReuseIdentifier: collectionViewCellReuse)
 
-        //Looks for single or multiple taps.
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
 
-        //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
-        //tap.cancelsTouchesInView = false
-
+        tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
-
 
         setLabelsText()
         setupGradient()
         updateAppereance()
     }
+
     func setLabelsText() {
         humidityLabel.text = NSLocalizedString("HumidityTitle", comment: "")
         feelsLikeLabel.text = NSLocalizedString("FeelsLikeTitle", comment: "")
@@ -132,6 +129,7 @@ class ViewController: UIViewController {
     @IBAction func tappedOutside(_ sender: Any) {
         searchBar.resignFirstResponder()
     }
+
     @IBAction func dayTimeChange(_ sender: UIButton) {
         dayTime = dayTime.getNext()
         updateAppereance()
@@ -159,6 +157,7 @@ class ViewController: UIViewController {
     }
 }
 
+//MARK: - CLLocationManagerDelegate
 
 extension ViewController: CLLocationManagerDelegate {
     public func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation] ) {
@@ -173,6 +172,8 @@ extension ViewController: CLLocationManagerDelegate {
     }
 }
 
+//MARK: - UITableViewDelegate
+
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let city = cities[indexPath.row]
@@ -181,6 +182,8 @@ extension ViewController: UITableViewDelegate {
         cities = []
     }
 }
+
+//MARK: - UITableViewDataSource
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -198,6 +201,7 @@ extension ViewController: UITableViewDataSource {
     }
 }
 
+//MARK: - UICollectionViewDelegate
 
 extension ViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -207,6 +211,8 @@ extension ViewController: UICollectionViewDelegate {
         self.present(alert, animated: true)
     }
 }
+
+//MARK: - UICollectionViewDataSource
 
 extension ViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -222,8 +228,9 @@ extension ViewController: UICollectionViewDataSource {
         cell.configure(daily: daily[indexPath.item], dayTime: dayTime)
         return cell
     }
-
 }
+
+//MARK: - UISearchBarDelegate
 
 extension ViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {

@@ -12,7 +12,6 @@ enum BackgroundItems {
     case woods
     case sea
 
-
     func getBackgroundImage(dayTime: DayTime) -> UIImage? {
         switch dayTime {
             case .morning:

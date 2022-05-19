@@ -124,7 +124,6 @@ public final class WeatherService: NSObject {
     }
 }
 
-
 struct City: Decodable {
     let name: String
     let localNames: [String:String]
