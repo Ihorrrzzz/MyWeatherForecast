@@ -1,0 +1,27 @@
+
+
+"CancelTitle" = "Ok";
+
+
+"DayTitle" = "Day";
+
+
+"EveningTitle" = "Evening";
+
+
+"FeelsLikeTitle" = "Feels like";
+
+
+"HumidityTitle" = "Humidity";
+
+
+"MorningTitle" = "Morning";
+
+
+"NightTitle" = "Night";
+
+
+"WindTitle" = "Wind";
+
+
+"kmHFormat" = "%.0f km/h";

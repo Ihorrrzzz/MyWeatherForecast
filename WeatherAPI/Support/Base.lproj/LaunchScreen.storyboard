@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Qde-1N-Avl">
+                                <rect key="frame" x="90" y="372" width="234" height="152.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="cloud.sun" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="4H1-Es-tgb">
+                                        <rect key="frame" x="50" y="-0.5" width="135" height="86"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="87" id="Uag-c5-uhg"/>
+                                            <constraint firstAttribute="width" constant="134" id="nWk-su-3br"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MYweather" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FqY-uA-p9J">
+                                        <rect key="frame" x="0.0" y="95" width="234" height="57.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="wood" translatesAutoresizingMaskIntoConstraints="NO" id="XyM-zt-WXY">
+                                <rect key="frame" x="0.0" y="722" width="414" height="189"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="XyM-zt-WXY" secondAttribute="height" multiplier="46:21" id="2z2-3g-ied"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XyM-zt-WXY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Mvr-ah-X49"/>
+                            <constraint firstItem="Qde-1N-Avl" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="e5F-hl-l58"/>
+                            <constraint firstAttribute="bottom" secondItem="XyM-zt-WXY" secondAttribute="bottom" constant="-15" id="oBa-L3-XDv"/>
+                            <constraint firstItem="Qde-1N-Avl" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="st3-sU-Hai"/>
+                            <constraint firstItem="XyM-zt-WXY" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="xsn-9A-2wu"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cloud.sun" catalog="system" width="128" height="95"/>
+        <image name="wood" width="375" height="182"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,27 @@
+
+
+"CancelTitle" = "Гаразд";
+
+
+"DayTitle" = "День";
+
+
+"EveningTitle" = "Вечір";
+
+
+"FeelsLikeTitle" = "Відчувається як";
+
+/* / */
+"HumidityTitle" = "Вологість";
+
+
+"MorningTitle" = "Ранок";
+
+
+"NightTitle" = "Ніч";
+
+
+"WindTitle" = "Вітер";
+
+
+"kmHFormat" = "%0.f км/год";
