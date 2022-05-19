@@ -1,0 +1,36 @@
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "0bF-Vt-ETL"; */
+"0bF-Vt-ETL.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Saturday"; ObjectID = "76i-hx-l3o"; */
+"76i-hx-l3o.text" = "Saturday";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "B2u-JU-9HR"; */
+"B2u-JU-9HR.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Feels like"; ObjectID = "H74-hC-B7q"; */
+"H74-hC-B7q.text" = "Feels like";
+
+/* Class = "UILabel"; text = "Wind"; ObjectID = "Hkr-rn-Ao4"; */
+"Hkr-rn-Ao4.text" = "Wind";
+
+/* Class = "UILabel"; text = "New York"; ObjectID = "Mi9-aO-IeO"; */
+"Mi9-aO-IeO.text" = "New York";
+
+/* Class = "UILabel"; text = "10"; ObjectID = "QcG-xc-o3A"; */
+"QcG-xc-o3A.text" = "10";
+
+/* Class = "UILabel"; text = "10"; ObjectID = "Ryp-ra-bPD"; */
+"Ryp-ra-bPD.text" = "10";
+
+/* Class = "UILabel"; text = "Humidity"; ObjectID = "YY9-bN-gpk"; */
+"YY9-bN-gpk.text" = "Humidity";
+
+/* Class = "UILabel"; text = "2 km/h"; ObjectID = "ew1-V7-boM"; */
+"ew1-V7-boM.text" = "2 km/h";
+
+/* Class = "UILabel"; text = "Day"; ObjectID = "nED-0z-4Wt"; */
+"nED-0z-4Wt.text" = "Day";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "zag-Dp-GPq"; */
+"zag-Dp-GPq.text" = "0";
